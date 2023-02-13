@@ -69,7 +69,7 @@ export default function Nav() {
                   </Center>
                   <br />
                   <Center>
-                    <p>Username</p>
+                    <p>Brando's Future Employer</p>
                   </Center>
                   <br />
                   <MenuDivider />
