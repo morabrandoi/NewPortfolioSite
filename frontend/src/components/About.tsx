@@ -1,6 +1,6 @@
 import * as React from "react"
 import {
-  Text
+  Heading,
 } from "@chakra-ui/react"
 
 type AboutProps = {
@@ -10,8 +10,8 @@ type AboutProps = {
 export default function About(props: AboutProps) {
 
   return (
-    <Text>
-      This is about
-    </Text>
+    <Heading>
+      {"<About>"}
+    </Heading>
   );
 }

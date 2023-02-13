@@ -1,6 +1,6 @@
 import * as React from "react"
 import {
-  Text
+  Heading
 } from "@chakra-ui/react"
 
 type ExperienceProps = {
@@ -10,8 +10,8 @@ type ExperienceProps = {
 export default function Experience(props: ExperienceProps) {
 
   return (
-    <Text>
-      This is Experience
-    </Text>
+    <Heading>
+      {"<Experience>"}
+    </Heading>
   );
 }

@@ -1,6 +1,6 @@
 import * as React from "react"
 import {
-  Text
+  Heading
 } from "@chakra-ui/react"
 
 type ProjectsProps = {
@@ -10,8 +10,8 @@ type ProjectsProps = {
 export default function Projects(props: ProjectsProps) {
 
   return (
-    <Text>
-      This is Projects
-    </Text>
+    <Heading>
+      {"<Projects>"}
+    </Heading>
   );
 }
