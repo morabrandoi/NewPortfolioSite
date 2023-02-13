@@ -17,6 +17,7 @@ export default function About(props: AboutProps) {
     <VStack
       sx={{'scrollMarginTop': '100px'}}
       spacing={50}
+      zIndex={50}
     >
       <Heading as='h1'>
         {"<About>"}
