@@ -3,7 +3,6 @@ import {
   VStack,
   Heading,
   Image,
-  Box,
 } from "@chakra-ui/react"
 
 type AboutProps = {
@@ -15,23 +14,24 @@ export default function About(props: AboutProps) {
   return (
     <VStack
       sx={{'scrollMarginTop': '100px'}}
+      spacing={50}
     >
-      <Heading>
+      <Heading as='h1'>
         {"<About>"}
       </Heading>
       
-      <Box m={100}>
-        <Image
-          borderRadius='50px'
-          boxSize='200px'
-          objectFit='cover'
-          src='/GradPic2.jpg'
-          alt='A picture of me, Brando Mora'>
-        </Image>
-      </Box>
+      <Image
+        borderRadius='50px'
+        boxSize='200px'
+        objectFit='cover'
+        src='/GradPic2.jpg'
+        alt='A picture of me, Brando Mora'>
+      </Image>
+
+      <Heading as='h2'>
+        Hello there
+      </Heading>
       
-
-
     </VStack>
       
   );
