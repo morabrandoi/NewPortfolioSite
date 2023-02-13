@@ -3,6 +3,8 @@ import {
   VStack,
   Heading,
   Image,
+  Container,
+  Text
 } from "@chakra-ui/react"
 
 type AboutProps = {
@@ -29,8 +31,14 @@ export default function About(props: AboutProps) {
       </Image>
 
       <Heading as='h2'>
-        Hello there
+        I'm Brando Mora
       </Heading>
+
+      <Container>
+        <Text>
+          I have been fortunate enough throughout my life to be in a position to pursue my passions in computer science and mathematics. I have had the opportunity to work on many great projects and that's what this website is for.
+        </Text>
+      </Container>
       
     </VStack>
       
