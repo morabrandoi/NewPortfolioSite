@@ -1,7 +1,7 @@
 import * as React from "react"
 import {
-  Flex,
-  Box
+  StackDivider,
+  VStack
 } from "@chakra-ui/react"
 import About from "./About"
 import Experience from "./Experience"
@@ -15,14 +15,13 @@ import Contact from "./Contact"
 export default function Body() {
 
   return (
-    <Flex direction={'column'} align='center' >
+    <VStack
+      divider={<StackDivider borderColor='gray.200' />}
+    >
       <About/>
-      <Box w='70px' h='1000' bg='red.500' />
       <Experience/>
-      <Box w='70px' h='1000' bg='red.500' />
       <Projects/>
-      <Box w='70px' h='1000' bg='red.500' />
       <Contact/>
-    </Flex>
+    </VStack>
   );
 }

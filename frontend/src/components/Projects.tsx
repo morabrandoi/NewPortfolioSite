@@ -10,7 +10,7 @@ type ProjectsProps = {
 export default function Projects(props: ProjectsProps) {
 
   return (
-    <Heading id="Projects" sx={{'scroll-margin-top': '100px'}}>
+    <Heading id="Projects" sx={{'scrollMarginTop': '100px'}}>
       {"<Projects>"}
     </Heading>
   );

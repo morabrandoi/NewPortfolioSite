@@ -10,7 +10,7 @@ type ExperienceProps = {
 export default function Experience(props: ExperienceProps) {
 
   return (
-    <Heading id="Experience" sx={{'scroll-margin-top': '100px'}}>
+    <Heading id="Experience" sx={{'scrollMarginTop': '100px'}}>
       {"<Experience>"}
     </Heading>
   );

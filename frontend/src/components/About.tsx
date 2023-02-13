@@ -1,8 +1,9 @@
 import * as React from "react"
 import {
-  Flex,
+  VStack,
   Heading,
   Image,
+  Box,
 } from "@chakra-ui/react"
 
 type AboutProps = {
@@ -12,18 +13,26 @@ type AboutProps = {
 export default function About(props: AboutProps) {
 
   return (
-    <Flex id="About" sx={{'scroll-margin-top': '100px'}} direction="column" alignItems="center">
+    <VStack
+      sx={{'scrollMarginTop': '100px'}}
+    >
       <Heading>
         {"<About>"}
       </Heading>
-      <Image
-        borderRadius='full'
-        boxSize='xs'
-        objectFit='cover'
-        src='/GradPic2.jpg'
-        alt='Dan Abramov'>
-      </Image>
-    </Flex>
+      
+      <Box m={100}>
+        <Image
+          borderRadius='50px'
+          boxSize='200px'
+          objectFit='cover'
+          src='/GradPic2.jpg'
+          alt='A picture of me, Brando Mora'>
+        </Image>
+      </Box>
+      
+
+
+    </VStack>
       
   );
 }
