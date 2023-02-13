@@ -10,7 +10,7 @@ type ContactProps = {
 export default function Contact(props: ContactProps) {
 
   return (
-    <Heading>
+    <Heading id="Contact" sx={{'scroll-margin-top': '100px'}}>
       {"<Contact>"}
     </Heading>
   );
