@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "brando-mora-personal-site"
+  },
+  "targets": {
+    "brando-mora-personal-site": {
+      "hosting": {
+        "new": [
+          "brandomora"
+        ]
+      }
+    }
+  }
+}
