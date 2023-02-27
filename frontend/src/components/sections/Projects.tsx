@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Heading, Box, useColorModeValue } from '@chakra-ui/react';
+import { Heading, Box, useColorModeValue, VStack, Flex } from '@chakra-ui/react';
+import ProjectItem from '../common/ProjectItem';
 
 export default function Projects() {
   return (
@@ -12,6 +13,20 @@ export default function Projects() {
       id="Projects"
       sx={{ scrollMarginTop: '100px' }}>
       <Heading size={'lg'}>{'<Projects>'}</Heading>
+      <Flex direction={'column'}>
+        <ProjectItem
+          mediaURL="https://media.tenor.com/qMZe3e1Er7EAAAAC/example.gif"
+          projectName="Sample"
+          briefDescription="Sample Desc"
+          margin={10}
+        />
+        <ProjectItem
+          mediaURL="https://media.tenor.com/qMZe3e1Er7EAAAAC/example.gif"
+          projectName="Sample"
+          briefDescription="Sample Desc"
+          margin={10}
+        />
+      </Flex>
     </Box>
   );
 }
