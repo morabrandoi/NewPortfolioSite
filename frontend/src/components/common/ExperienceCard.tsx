@@ -5,6 +5,6 @@ interface ExperienceCardProps {
   text: string;
 }
 
-export default function ExperienceCard(props: ExperienceCardProps) {
+export default function ExperienceCard() {
   return <div></div>;
 }

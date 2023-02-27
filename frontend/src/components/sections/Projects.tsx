@@ -1,10 +1,17 @@
 import * as React from 'react';
-import { Heading } from '@chakra-ui/react';
+import { Heading, Box, useColorModeValue } from '@chakra-ui/react';
 
 export default function Projects() {
   return (
-    <Heading id="Projects" sx={{ scrollMarginTop: '100px' }}>
-      {'<Projects>'}
-    </Heading>
+    <Box
+      zIndex={10}
+      borderRadius={10}
+      backgroundColor={useColorModeValue('whiteAlpha.700', 'blackAlpha.700')}
+      m={8}
+      p={8}
+      id="Projects"
+      sx={{ scrollMarginTop: '100px' }}>
+      <Heading size={'lg'}>{'<Projects>'}</Heading>
+    </Box>
   );
 }
