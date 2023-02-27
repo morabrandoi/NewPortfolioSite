@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Text, VStack, Image } from '@chakra-ui/react';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface ExperienceItemProps {
   imgUrl: string;
   companyName: string;
