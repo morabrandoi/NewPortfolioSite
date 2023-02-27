@@ -1,19 +1,15 @@
-import * as React from "react"
-import {
-  ChakraProvider,
-  theme,
-  VStack,
-} from "@chakra-ui/react"
-import Nav from "./Nav"
-import Body from "./Body"
-import ParticlesBG from "./ParticlesBG"
+import * as React from 'react';
+import { ChakraProvider, theme, VStack } from '@chakra-ui/react';
+import Nav from './Nav';
+import Body from './Body';
+import ParticlesBG from './ParticlesBG';
 
 export const App = () => (
   <ChakraProvider theme={theme}>
-    <ParticlesBG/>
-    <Nav/>
+    <ParticlesBG />
+    <Nav />
     <VStack>
-      <Body/>
+      <Body />
     </VStack>
   </ChakraProvider>
-)
+);
