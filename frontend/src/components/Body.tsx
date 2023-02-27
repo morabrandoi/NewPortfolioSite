@@ -4,10 +4,10 @@ import {
   VStack,
   useColorModeValue
 } from "@chakra-ui/react"
-import About from "./About"
-import Experience from "./Experience"
-import Projects from "./Projects"
-import Contact from "./Contact"
+import About from "./sections/About"
+import Experience from "./sections/Experience"
+import Projects from "./sections/Projects"
+import Contact from "./sections/Contact"
 
 
 // type BodyProps = {

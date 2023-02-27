@@ -27,7 +27,7 @@ export default function About(props: AboutProps) {
         borderRadius='50px'
         boxSize='200px'
         objectFit='cover'
-        src='/GradPic2.jpg'
+        src='/imgs/GradPic2.jpg'
         alt='A picture of me, Brando Mora'>
       </Image>
 

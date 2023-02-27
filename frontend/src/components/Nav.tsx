@@ -81,7 +81,7 @@ export default function Nav() {
                 <Avatar
                   size={'sm'}
                   src={
-                    '/GradPic2.jpg'
+                    '/imgs/GradPic2.jpg'
                   }
                 />
               </MenuButton>
@@ -90,7 +90,7 @@ export default function Nav() {
                   <Center>
                     <Avatar
                       size={'2xl'}
-                      src={'/GradPic2.jpg'}
+                      src={'/imgs/GradPic2.jpg'}
                     />
                   </Center>
                   <br />
