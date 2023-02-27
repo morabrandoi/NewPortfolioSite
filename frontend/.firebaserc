@@ -5,7 +5,7 @@
   "targets": {
     "brando-mora-personal-site": {
       "hosting": {
-        "new": [
+        "www": [
           "brandomora"
         ]
       }
