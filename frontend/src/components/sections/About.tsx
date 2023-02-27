@@ -7,7 +7,7 @@ import {
   Text
 } from "@chakra-ui/react"
 
-type AboutProps = {
+interface AboutProps {
 
 }
 

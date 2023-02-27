@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 import {
   Box,
   Flex,
@@ -22,7 +22,7 @@ import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 
 const Links = ['About', 'Experience', 'Projects', 'Contact'];
 
-type NavLinkProps = {
+interface NavLinkProps {
   children: ReactNode,
   url: string
 }
