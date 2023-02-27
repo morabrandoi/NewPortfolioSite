@@ -1,4 +1,4 @@
-import { type ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 import {
   Box,
   Flex,
@@ -16,15 +16,15 @@ import {
   useColorModeValue,
   Stack,
   Center,
-  useColorMode,
+  useColorMode
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 
 const Links = ['About', 'Experience', 'Projects', 'Contact'];
 
 interface NavLinkProps {
-  children: ReactNode,
-  url: string
+  children: ReactNode;
+  url: string;
 }
 
 const NavLink = ({ children, url }: NavLinkProps) => (
@@ -34,7 +34,7 @@ const NavLink = ({ children, url }: NavLinkProps) => (
     rounded={'md'}
     _hover={{
       textDecoration: 'none',
-      bg: useColorModeValue('gray.200', 'gray.700'),
+      bg: useColorModeValue('gray.200', 'gray.700')
     }}
     href={url}>
     {children}
@@ -47,7 +47,12 @@ export default function Nav() {
 
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4} position={'sticky'} top={0} zIndex={10000}>
+      <Box
+        bg={useColorModeValue('gray.100', 'gray.900')}
+        px={4}
+        position={'sticky'}
+        top={0}
+        zIndex={10000}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -57,52 +62,38 @@ export default function Nav() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box>Logo</Box>
-            <HStack
-              as={'nav'}
-              spacing={4}
-              display={{ base: 'none', md: 'flex' }}>
+            <Box>Portfolio Site</Box>
+            <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
-                <NavLink key={link} url={"#" + link}>{link}</NavLink>
+                <NavLink key={link} url={'#' + link}>
+                  {link}
+                </NavLink>
               ))}
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
             <Button onClick={toggleColorMode}>
-                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+              {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
             </Button>
             <Menu>
-              <MenuButton
-                as={Button}
-                rounded={'full'}
-                variant={'link'}
-                cursor={'pointer'}
-                minW={0}>
-                <Avatar
-                  size={'sm'}
-                  src={
-                    '/imgs/GradPic2.jpg'
-                  }
-                />
+              <MenuButton as={Button} rounded={'full'} variant={'link'} cursor={'pointer'} minW={0}>
+                <Avatar size={'sm'} src={'/imgs/GradPic2.jpg'} />
               </MenuButton>
               <MenuList alignItems={'center'}>
-                  <br />
-                  <Center>
-                    <Avatar
-                      size={'2xl'}
-                      src={'/imgs/GradPic2.jpg'}
-                    />
-                  </Center>
-                  <br />
-                  <Center>
-                    <p>Your Future Employee</p>
-                  </Center>
-                  <br />
-                  <MenuDivider />
-                  <MenuItem>LinkedIn</MenuItem>
-                  <MenuItem>GitHub</MenuItem>
-                  <MenuItem>Resume</MenuItem>
-                </MenuList>
+                <br />
+                <Center>
+                  <Avatar size={'2xl'} src={'/imgs/GradPic2.jpg'} />
+                </Center>
+                <br />
+                <Center>
+                  <p>Your Future Employee</p>
+                </Center>
+                <br />
+                <MenuDivider />
+                <MenuItem>LinkedIn</MenuItem>
+                <MenuItem>GitHub</MenuItem>
+                <MenuItem>Resume</MenuItem>
+              </MenuList>
             </Menu>
           </Flex>
         </Flex>
@@ -111,7 +102,10 @@ export default function Nav() {
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
-                <NavLink key={link} url={"#" + link}> {link}</NavLink>
+                <NavLink key={link} url={'#' + link}>
+                  {' '}
+                  {link}
+                </NavLink>
               ))}
             </Stack>
           </Box>

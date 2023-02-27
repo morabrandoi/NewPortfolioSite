@@ -1,17 +1,10 @@
-import * as React from "react"
-import {
-  Heading
-} from "@chakra-ui/react"
+import * as React from 'react';
+import { Heading } from '@chakra-ui/react';
 
-interface ContactProps {
-
-}
-
-export default function Contact(props: ContactProps) {
-
+export default function Contact() {
   return (
-    <Heading id="Contact" sx={{'scrollMarginTop': '100px'}}>
-      {"<Contact>"}
+    <Heading id="Contact" sx={{ scrollMarginTop: '100px' }}>
+      {'<Contact>'}
     </Heading>
   );
 }
