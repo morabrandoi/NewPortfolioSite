@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Text, VStack, Image } from '@chakra-ui/react';
 
 interface ExperienceItemProps {

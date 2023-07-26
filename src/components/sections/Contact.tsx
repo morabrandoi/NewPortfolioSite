@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Heading, Box, useColorModeValue } from '@chakra-ui/react';
 
 export default function Contact() {
@@ -10,7 +9,8 @@ export default function Contact() {
       m={8}
       p={8}
       id="Contact"
-      sx={{ scrollMarginTop: '100px' }}>
+      sx={{ scrollMarginTop: '100px' }}
+    >
       <Heading size={'lg'}>{'<Contact>'}</Heading>
     </Box>
   );

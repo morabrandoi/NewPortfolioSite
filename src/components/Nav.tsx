@@ -1,4 +1,4 @@
-import React, { type ReactNode } from 'react';
+import { ReactNode } from 'react';
 import {
   Box,
   Flex,
@@ -16,7 +16,7 @@ import {
   useColorModeValue,
   Stack,
   Center,
-  useColorMode
+  useColorMode,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 
@@ -34,9 +34,10 @@ const NavLink = ({ children, url }: NavLinkProps) => (
     rounded={'md'}
     _hover={{
       textDecoration: 'none',
-      bg: useColorModeValue('gray.200', 'gray.700')
+      bg: useColorModeValue('gray.200', 'gray.700'),
     }}
-    href={url}>
+    href={url}
+  >
     {children}
   </Link>
 );
@@ -52,7 +53,8 @@ export default function Nav() {
         px={4}
         position={'sticky'}
         top={0}
-        zIndex={10000}>
+        zIndex={10000}
+      >
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -63,7 +65,11 @@ export default function Nav() {
           />
           <HStack spacing={8} alignItems={'center'}>
             <Box>Portfolio Site</Box>
-            <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
+            <HStack
+              as={'nav'}
+              spacing={4}
+              display={{ base: 'none', md: 'flex' }}
+            >
               {Links.map((link) => (
                 <NavLink key={link} url={'#' + link}>
                   {link}
@@ -76,7 +82,13 @@ export default function Nav() {
               {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
             </Button>
             <Menu>
-              <MenuButton as={Button} rounded={'full'} variant={'link'} cursor={'pointer'} minW={0}>
+              <MenuButton
+                as={Button}
+                rounded={'full'}
+                variant={'link'}
+                cursor={'pointer'}
+                minW={0}
+              >
                 <Avatar size={'sm'} src={'/imgs/GradPic2.jpg'} />
               </MenuButton>
               <MenuList alignItems={'center'}>

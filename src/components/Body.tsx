@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { VStack, Container } from '@chakra-ui/react';
 import About from './sections/About';
 import Experience from './sections/Experience';

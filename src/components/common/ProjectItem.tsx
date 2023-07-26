@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Text, Image, Flex } from '@chakra-ui/react';
 
 interface ProjectItemProps {
@@ -16,7 +15,12 @@ export default function ProjectItem({
   ...flexProps
 }: ProjectItemProps) {
   return (
-    <Flex align={'flex-start'} justifyContent="left" direction="row" {...flexProps}>
+    <Flex
+      align={'flex-start'}
+      justifyContent="left"
+      direction="row"
+      {...flexProps}
+    >
       <Image
         borderRadius="10px"
         minWidth={'100px'}

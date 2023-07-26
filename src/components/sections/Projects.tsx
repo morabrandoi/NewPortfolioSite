@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { Heading, Box, useColorModeValue, VStack, Flex } from '@chakra-ui/react';
+import { Heading, Box, useColorModeValue, Flex } from '@chakra-ui/react';
 import ProjectItem from '../common/ProjectItem';
 
 export default function Projects() {
@@ -11,7 +10,8 @@ export default function Projects() {
       m={8}
       p={8}
       id="Projects"
-      sx={{ scrollMarginTop: '100px' }}>
+      sx={{ scrollMarginTop: '100px' }}
+    >
       <Heading size={'lg'}>{'<Projects>'}</Heading>
       <Flex direction={'column'}>
         <ProjectItem
