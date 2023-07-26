@@ -39,7 +39,12 @@
     }
   },
   "rules": {
-    "linebreak-style": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "varsIgnorePattern": "^_"
+      }
+    ],
     "@typescript-eslint/ban-types": [
       "error",
       {
