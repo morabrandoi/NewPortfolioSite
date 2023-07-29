@@ -19,8 +19,9 @@ import {
   useColorMode,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
+import { HEADSHOT_FILENAME } from '../constants/constants';
 
-const Links = ['About', 'Experience', 'Projects', 'Contact'];
+const LINKS = ['About', 'Experience', 'Projects', 'Contact'];
 
 interface NavLinkProps {
   children: ReactNode;
@@ -43,34 +44,43 @@ const NavLink = ({ children, url }: NavLinkProps) => (
 );
 
 export default function Nav() {
-  const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const hamburgerIcon = isOpen ? <CloseIcon /> : <HamburgerIcon />;
+
+  const { colorMode, toggleColorMode } = useColorMode();
+  const colorModeValue = useColorModeValue('gray.100', 'gray.900');
+  const toggleColorIcon = colorMode === 'light' ? <MoonIcon /> : <SunIcon />;
 
   return (
     <>
       <Box
-        bg={useColorModeValue('gray.100', 'gray.900')}
-        px={4}
+        bg={colorModeValue}
         position={'sticky'}
+        px={4}
         top={0}
+        width={'100%'}
         zIndex={10000}
       >
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+        <Flex
+          height={'6vh'}
+          alignItems={'center'}
+          justifyContent={'space-between'}
+        >
           <IconButton
             size={'md'}
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            icon={hamburgerIcon}
             aria-label={'Open Menu'}
             display={{ md: 'none' }}
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box>Portfolio Site</Box>
+            <Box>Brando Mora</Box>
             <HStack
               as={'nav'}
               spacing={4}
               display={{ base: 'none', md: 'flex' }}
             >
-              {Links.map((link) => (
+              {LINKS.map((link) => (
                 <NavLink key={link} url={'#' + link}>
                   {link}
                 </NavLink>
@@ -78,8 +88,8 @@ export default function Nav() {
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
-            <Button onClick={toggleColorMode}>
-              {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+            <Button onClick={toggleColorMode} marginRight={4}>
+              {toggleColorIcon}
             </Button>
             <Menu>
               <MenuButton
@@ -88,13 +98,14 @@ export default function Nav() {
                 variant={'link'}
                 cursor={'pointer'}
                 minW={0}
+                marginRight={4}
               >
-                <Avatar size={'sm'} src={'/imgs/GradPic2.jpg'} />
+                <Avatar size={'sm'} src={`/imgs/${HEADSHOT_FILENAME}`} />
               </MenuButton>
               <MenuList alignItems={'center'}>
                 <br />
                 <Center>
-                  <Avatar size={'2xl'} src={'/imgs/GradPic2.jpg'} />
+                  <Avatar size={'2xl'} src={`/imgs/${HEADSHOT_FILENAME}`} />
                 </Center>
                 <br />
                 <Center>
@@ -113,7 +124,7 @@ export default function Nav() {
         {isOpen ? (
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
-              {Links.map((link) => (
+              {LINKS.map((link) => (
                 <NavLink key={link} url={'#' + link}>
                   {' '}
                   {link}

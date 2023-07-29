@@ -1,5 +1,12 @@
 import { Box, Flex, Heading, useColorModeValue } from '@chakra-ui/react';
 import ExperienceItem from '../common/ExperienceItem';
+import {
+  CCANAL_LOGO_FILENAME,
+  FB_LOGO_FILENAME,
+  META_LOGO_FILENAME,
+  OCULUS_LOGO_FILENAME,
+  UF_BIO_LOGO_FILENAME,
+} from '../../constants/constants';
 
 export default function Experience() {
   return (
@@ -20,7 +27,7 @@ export default function Experience() {
       >
         <ExperienceItem
           companyName="Facebook"
-          imgUrl="/imgs/fbLogo.png"
+          imgUrl={`/imgs/${FB_LOGO_FILENAME}`}
           role="FBU Software Engineer Intern"
           year="2020"
           m={8}
@@ -28,7 +35,7 @@ export default function Experience() {
         />
         <ExperienceItem
           companyName="UF Bio Lab"
-          imgUrl="/imgs/ufBioLogo.jpg"
+          imgUrl={`/imgs/${UF_BIO_LOGO_FILENAME}`}
           role="Undergradute Research Assistant"
           year="2020 - 2021"
           m={8}
@@ -36,7 +43,7 @@ export default function Experience() {
         />
         <ExperienceItem
           companyName="Oculus"
-          imgUrl="/imgs/oculusLogo.png"
+          imgUrl={`/imgs/${OCULUS_LOGO_FILENAME}`}
           role="Software Engineer Intern"
           year="2021"
           m={8}
@@ -45,7 +52,7 @@ export default function Experience() {
 
         <ExperienceItem
           companyName="Meta"
-          imgUrl="/imgs/metaLogo.png"
+          imgUrl={`/imgs/${META_LOGO_FILENAME}`}
           role="Software Engineer"
           year="2022"
           m={8}
@@ -53,8 +60,8 @@ export default function Experience() {
         />
         <ExperienceItem
           companyName="Commerce Canal"
-          imgUrl="/imgs/wrappedCCLogo.png"
-          role="Software Engineer"
+          imgUrl={`/imgs/${CCANAL_LOGO_FILENAME}`}
+          role="Fullstack Software Engineer"
           year="2023"
           m={8}
           maxWidth={150}
