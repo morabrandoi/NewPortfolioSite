@@ -1,8 +1,10 @@
 import { Heading, Box, useColorModeValue } from '@chakra-ui/react';
+import './styles.scss';
 
 export default function Contact() {
   return (
     <Box
+      className="section"
       zIndex={10}
       borderRadius={10}
       backgroundColor={useColorModeValue('whiteAlpha.700', 'blackAlpha.700')}
@@ -11,7 +13,7 @@ export default function Contact() {
       id="Contact"
       sx={{ scrollMarginTop: '100px' }}
     >
-      <Heading size={'lg'}>{'<Contact>'}</Heading>
+      <Heading size={'md'}>{'<Contact>'}</Heading>
     </Box>
   );
 }

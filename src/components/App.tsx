@@ -1,14 +1,14 @@
-import { ChakraProvider, theme, VStack } from '@chakra-ui/react';
+import { ChakraProvider, Container, theme } from '@chakra-ui/react';
 import Nav from './Nav';
-import Body from './Body';
 import ParticlesBG from './ParticlesBG';
+import Body from './Body';
 
 export const App = () => (
   <ChakraProvider theme={theme}>
-    <ParticlesBG />
+    <Container zIndex={-1}>
+      <ParticlesBG />
+    </Container>
     <Nav />
-    <VStack>
-      <Body />
-    </VStack>
+    <Body />
   </ChakraProvider>
 );

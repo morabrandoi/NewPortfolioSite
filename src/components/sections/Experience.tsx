@@ -7,10 +7,12 @@ import {
   OCULUS_LOGO_FILENAME,
   UF_BIO_LOGO_FILENAME,
 } from '../../constants/constants';
+import './styles.scss';
 
 export default function Experience() {
   return (
     <Box
+      className="section"
       zIndex={10}
       borderRadius={10}
       backgroundColor={useColorModeValue('whiteAlpha.700', 'blackAlpha.700')}
@@ -19,7 +21,7 @@ export default function Experience() {
       id="Experience"
       sx={{ scrollMarginTop: '100px' }}
     >
-      <Heading size={'lg'}>{'<Experience>'}</Heading>
+      <Heading size={'md'}>{'<Experience>'}</Heading>
       <Flex
         flexWrap={'wrap'}
         justifyContent={'center'}
@@ -59,7 +61,7 @@ export default function Experience() {
           maxWidth={150}
         />
         <ExperienceItem
-          companyName="Commerce Canal"
+          companyName="Commerce Canal (Startup)"
           imgUrl={`/imgs/${CCANAL_LOGO_FILENAME}`}
           role="Fullstack Software Engineer"
           year="2023"

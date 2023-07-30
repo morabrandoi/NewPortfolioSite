@@ -6,13 +6,17 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import { HEADSHOT_FILENAME } from '../../constants/constants';
+import './styles.scss';
 
 export default function About() {
+  const backgroundColor = useColorModeValue('whiteAlpha.700', 'blackAlpha.700');
+
   return (
     <Box
+      className="section"
       zIndex={10}
       borderRadius={10}
-      backgroundColor={useColorModeValue('whiteAlpha.700', 'blackAlpha.700')}
+      backgroundColor={backgroundColor}
       m={8}
       p={8}
       id="About"

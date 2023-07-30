@@ -29,7 +29,11 @@ export default function ProjectItem({
         src={mediaURL}
         alt="A picture or gif of the given project"
       />
-      <Flex justifyContent={'flex-start'} direction={'column'} marginLeft={20}>
+      <Flex
+        justifyContent={'flex-start'}
+        direction={'column'}
+        marginLeft={'4vw'}
+      >
         <Text as="b">{projectName}</Text>
         <Text>{briefDescription}</Text>
       </Flex>

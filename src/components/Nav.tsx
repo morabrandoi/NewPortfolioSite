@@ -56,16 +56,12 @@ export default function Nav() {
       <Box
         bg={colorModeValue}
         position={'sticky'}
+        py={2}
         px={4}
         top={0}
-        width={'100%'}
         zIndex={10000}
       >
-        <Flex
-          height={'6vh'}
-          alignItems={'center'}
-          justifyContent={'space-between'}
-        >
+        <Flex alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
             icon={hamburgerIcon}
@@ -109,7 +105,7 @@ export default function Nav() {
                 </Center>
                 <br />
                 <Center>
-                  <p>Your Future Employee</p>
+                  <p>Your Future Employee ;)</p>
                 </Center>
                 <br />
                 <MenuDivider />
