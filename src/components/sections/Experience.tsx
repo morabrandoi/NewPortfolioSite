@@ -8,11 +8,10 @@ import {
   UF_BIO_LOGO_FILENAME,
 } from '../../constants/fileNames';
 import './styles.scss';
-import Section from '../common/Section/Section';
 
 export default function Experience() {
   return (
-    <Section transitionMs={450} linkNameId={'Experience'}>
+    <>
       <Heading size={'md'}>{'<Experience>'}</Heading>
       <Flex
         flexWrap={'wrap'}
@@ -61,6 +60,6 @@ export default function Experience() {
           maxWidth={150}
         />
       </Flex>
-    </Section>
+    </>
   );
 }

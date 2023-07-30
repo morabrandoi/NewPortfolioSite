@@ -1,11 +1,10 @@
 import { Heading, Flex } from '@chakra-ui/react';
 import ProjectItem from '../common/ProjectItem';
 import './styles.scss';
-import Section from '../common/Section/Section';
 
 export default function Projects() {
   return (
-    <Section transitionMs={600} linkNameId={'Projects'}>
+    <>
       <Heading size={'md'}>{'<Projects>'}</Heading>
       <Flex direction={'column'}>
         <ProjectItem
@@ -21,6 +20,6 @@ export default function Projects() {
           margin={8}
         />
       </Flex>
-    </Section>
+    </>
   );
 }
