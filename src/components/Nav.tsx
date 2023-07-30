@@ -51,6 +51,12 @@ export default function Nav() {
   const colorModeValue = useColorModeValue('gray.100', 'gray.900');
   const toggleColorIcon = colorMode === 'light' ? <MoonIcon /> : <SunIcon />;
 
+  const linkComponents = LINKS.map((link) => (
+    <NavLink key={link} url={'#' + link}>
+      {link}
+    </NavLink>
+  ));
+
   return (
     <>
       <Box
@@ -77,11 +83,7 @@ export default function Nav() {
               spacing={4}
               display={{ base: 'none', md: 'flex' }}
             >
-              {LINKS.map((link) => (
-                <NavLink key={link} url={'#' + link}>
-                  {link}
-                </NavLink>
-              ))}
+              {linkComponents}
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
@@ -95,7 +97,6 @@ export default function Nav() {
                 variant={'link'}
                 cursor={'pointer'}
                 minW={0}
-                marginRight={4}
               >
                 <Avatar size={'sm'} src={`/imgs/${HEADSHOT_FILENAME}`} />
               </MenuButton>
