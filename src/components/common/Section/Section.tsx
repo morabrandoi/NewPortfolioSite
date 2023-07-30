@@ -23,7 +23,7 @@ export default function Section({
   return (
     <Box
       className="section"
-      zIndex={10}
+      zIndex={100}
       borderRadius={10}
       backgroundColor={backgroundColor}
       m={8}

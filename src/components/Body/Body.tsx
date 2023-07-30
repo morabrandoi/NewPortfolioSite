@@ -26,7 +26,7 @@ export default function Body() {
 
   return (
     <VStack
-      zIndex={1}
+      zIndex={10}
       marginLeft={'auto'}
       marginRight={'auto'}
       width={'calc(max(350px, 60vw))'}
