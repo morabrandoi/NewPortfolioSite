@@ -1,19 +1,11 @@
-import { Heading, Box, useColorModeValue, Flex } from '@chakra-ui/react';
+import { Heading, Flex } from '@chakra-ui/react';
 import ProjectItem from '../common/ProjectItem';
 import './styles.scss';
+import Section from '../common/Section/Section';
 
 export default function Projects() {
   return (
-    <Box
-      className="section"
-      zIndex={10}
-      borderRadius={10}
-      backgroundColor={useColorModeValue('whiteAlpha.700', 'blackAlpha.700')}
-      m={8}
-      p={4}
-      id="Projects"
-      sx={{ scrollMarginTop: '100px' }}
-    >
+    <Section transitionMs={600} linkNameId={'Projects'}>
       <Heading size={'md'}>{'<Projects>'}</Heading>
       <Flex direction={'column'}>
         <ProjectItem
@@ -29,6 +21,6 @@ export default function Projects() {
           margin={8}
         />
       </Flex>
-    </Box>
+    </Section>
   );
 }

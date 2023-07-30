@@ -1,7 +1,8 @@
-import { ChakraProvider, Container, theme } from '@chakra-ui/react';
+import { ChakraProvider, Container } from '@chakra-ui/react';
 import Nav from './Nav';
 import ParticlesBG from './ParticlesBG';
 import Body from './Body';
+import theme from './theme';
 
 export const App = () => (
   <ChakraProvider theme={theme}>

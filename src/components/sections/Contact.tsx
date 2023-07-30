@@ -1,19 +1,11 @@
-import { Heading, Box, useColorModeValue } from '@chakra-ui/react';
+import { Heading } from '@chakra-ui/react';
 import './styles.scss';
+import Section from '../common/Section/Section';
 
 export default function Contact() {
   return (
-    <Box
-      className="section"
-      zIndex={10}
-      borderRadius={10}
-      backgroundColor={useColorModeValue('whiteAlpha.700', 'blackAlpha.700')}
-      m={8}
-      p={8}
-      id="Contact"
-      sx={{ scrollMarginTop: '100px' }}
-    >
+    <Section transitionMs={750} linkNameId={'Contact'}>
       <Heading size={'md'}>{'<Contact>'}</Heading>
-    </Box>
+    </Section>
   );
 }

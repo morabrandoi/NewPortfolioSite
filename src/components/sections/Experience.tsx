@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, useColorModeValue } from '@chakra-ui/react';
+import { Flex, Heading } from '@chakra-ui/react';
 import ExperienceItem from '../common/ExperienceItem';
 import {
   CCANAL_LOGO_FILENAME,
@@ -6,21 +6,13 @@ import {
   META_LOGO_FILENAME,
   OCULUS_LOGO_FILENAME,
   UF_BIO_LOGO_FILENAME,
-} from '../../constants/constants';
+} from '../../constants/fileNames';
 import './styles.scss';
+import Section from '../common/Section/Section';
 
 export default function Experience() {
   return (
-    <Box
-      className="section"
-      zIndex={10}
-      borderRadius={10}
-      backgroundColor={useColorModeValue('whiteAlpha.700', 'blackAlpha.700')}
-      m={8}
-      p={8}
-      id="Experience"
-      sx={{ scrollMarginTop: '100px' }}
-    >
+    <Section transitionMs={450} linkNameId={'Experience'}>
       <Heading size={'md'}>{'<Experience>'}</Heading>
       <Flex
         flexWrap={'wrap'}
@@ -69,6 +61,6 @@ export default function Experience() {
           maxWidth={150}
         />
       </Flex>
-    </Box>
+    </Section>
   );
 }

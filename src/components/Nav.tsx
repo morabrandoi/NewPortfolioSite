@@ -19,7 +19,7 @@ import {
   useColorMode,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
-import { HEADSHOT_FILENAME } from '../constants/constants';
+import { HEADSHOT_FILENAME } from '../constants/fileNames';
 
 const LINKS = ['About', 'Experience', 'Projects', 'Contact'];
 
@@ -60,6 +60,7 @@ export default function Nav() {
         px={4}
         top={0}
         zIndex={10000}
+        transition={'background-color 150ms ease-in'}
       >
         <Flex alignItems={'center'} justifyContent={'space-between'}>
           <IconButton

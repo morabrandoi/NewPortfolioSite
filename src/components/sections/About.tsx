@@ -1,27 +1,11 @@
-import {
-  VStack,
-  Heading,
-  Image,
-  Box,
-  useColorModeValue,
-} from '@chakra-ui/react';
-import { HEADSHOT_FILENAME } from '../../constants/constants';
+import { VStack, Heading, Image } from '@chakra-ui/react';
+import { HEADSHOT_FILENAME } from '../../constants/fileNames';
 import './styles.scss';
+import Section from '../common/Section/Section';
 
 export default function About() {
-  const backgroundColor = useColorModeValue('whiteAlpha.700', 'blackAlpha.700');
-
   return (
-    <Box
-      className="section"
-      zIndex={10}
-      borderRadius={10}
-      backgroundColor={backgroundColor}
-      m={8}
-      p={8}
-      id="About"
-      sx={{ scrollMarginTop: '1000px' }}
-    >
+    <Section transitionMs={300} linkNameId="About">
       {/* <Heading size={'lg'}>{'<About>'}</Heading> */}
       <VStack sx={{ scrollMarginTop: '1000px' }} spacing={25} zIndex={50}>
         <Image
@@ -39,6 +23,6 @@ export default function About() {
           Math enthusiast;
         </Heading>
       </VStack>
-    </Box>
+    </Section>
   );
 }
