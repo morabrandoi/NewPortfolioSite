@@ -1,7 +1,6 @@
 import { Flex, Heading } from '@chakra-ui/react';
 import ExperienceCard from '../../common/ExperienceCard';
-import './styles.scss';
-import { EXPERIENCES } from '../constants';
+import { EXPERIENCES } from '../../../constants/config';
 
 export default function Experience() {
   const experienceItems = EXPERIENCES.map((experience) => {

@@ -1,6 +1,5 @@
 import { VStack, Heading, Image } from '@chakra-ui/react';
 import { HEADSHOT_FILENAME } from '../../../constants/fileNames';
-import './styles.scss';
 
 export default function About() {
   return (

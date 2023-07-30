@@ -3,6 +3,7 @@ import {
   DARK_MODE_BG_COLOR,
   LIGHT_MODE_BG_COLOR,
 } from '../../../constants/constants';
+import './styles.scss';
 
 type SectionProps = {
   children: React.ReactNode;

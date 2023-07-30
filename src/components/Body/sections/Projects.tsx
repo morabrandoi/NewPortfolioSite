@@ -1,6 +1,5 @@
 import { Heading, Flex } from '@chakra-ui/react';
 import ProjectItem from '../../common/ProjectItem';
-import './styles.scss';
 
 export default function Projects() {
   return (
