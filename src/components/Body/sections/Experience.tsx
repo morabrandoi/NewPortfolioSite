@@ -9,8 +9,10 @@ export default function Experience() {
         companyName={experience.companyName}
         imgUrl={`/imgs/${experience.imgFileName}`}
         role={experience.role}
-        year={experience.year}
-        key={experience.companyName + experience.role}
+        dateRange={experience.dateRange}
+        bulletPoints={experience.bulletPoints}
+        relevantSkills={experience.relevantSkills}
+        key={experience.companyName + experience.dateRange}
       />
     );
   });

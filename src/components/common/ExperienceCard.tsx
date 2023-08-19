@@ -4,8 +4,10 @@ import { DetailsModal } from './Modal/Modal';
 interface ExperienceCardProps {
   imgUrl: string;
   companyName: string;
-  year: string;
+  dateRange: string;
   role: string;
+  relevantSkills: string[];
+  bulletPoints: string[];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [vstackProps: string]: any;
 }
@@ -13,8 +15,10 @@ interface ExperienceCardProps {
 export default function ExperienceCard({
   imgUrl,
   companyName,
-  year,
+  dateRange,
   role,
+  relevantSkills,
+  bulletPoints,
 }: ExperienceCardProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -47,21 +51,22 @@ export default function ExperienceCard({
             boxSize="75px"
             objectFit={'contain'}
             src={imgUrl}
-            alt="A picture of me, Brando Mora"
+            alt="A picture of the company logo."
           />
           <Text align={'center'} as="b">
             {companyName}
           </Text>
           <Text align={'center'} as="i">
-            {year}
+            {dateRange}
           </Text>
           <Text align={'center'}>{role}</Text>
         </VStack>
         <DetailsModal
           isOpen={isOpen}
           onClose={onClose}
-          modalBody={'asd'}
-          modalTitle="Title"
+          modalTitle={`${companyName} (${dateRange})`}
+          bulletPoints={bulletPoints}
+          relevantSkills={relevantSkills}
         />
       </Box>
     </>
