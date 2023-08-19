@@ -18,8 +18,15 @@ import {
   Center,
   useColorMode,
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
+import {
+  HamburgerIcon,
+  CloseIcon,
+  MoonIcon,
+  SunIcon,
+  ExternalLinkIcon,
+} from '@chakra-ui/icons';
 import { HEADSHOT_FILENAME } from '../constants/fileNames';
+import { EXTERNAL_LINKS } from '../constants/config';
 
 const LINKS = ['About', 'Experience', 'Projects', 'Contact'];
 
@@ -43,6 +50,20 @@ const NavLink = ({ children, url }: NavLinkProps) => (
   </Link>
 );
 
+type ExternalLinkProps = {
+  name: string;
+  url: string;
+};
+const ExternalLink = ({ name, url }: ExternalLinkProps) => {
+  return (
+    <Link href={url} isExternal>
+      <MenuItem>
+        {name} <ExternalLinkIcon mx="2px" />
+      </MenuItem>
+    </Link>
+  );
+};
+
 export default function Nav() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const hamburgerIcon = isOpen ? <CloseIcon /> : <HamburgerIcon />;
@@ -55,6 +76,10 @@ export default function Nav() {
     <NavLink key={link} url={'#' + link}>
       {link}
     </NavLink>
+  ));
+
+  const externalLinks = EXTERNAL_LINKS.map((link) => (
+    <ExternalLink key={link.name} name={link.name} url={link.url} />
   ));
 
   return (
@@ -111,9 +136,7 @@ export default function Nav() {
                 </Center>
                 <br />
                 <MenuDivider />
-                <MenuItem>LinkedIn</MenuItem>
-                <MenuItem>GitHub</MenuItem>
-                <MenuItem>Resume</MenuItem>
+                {externalLinks}
               </MenuList>
             </Menu>
           </Flex>

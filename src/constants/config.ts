@@ -7,33 +7,6 @@ import {
 } from './fileNames';
 import { Experience } from './types';
 
-// straight from my resume:
-// Meta										Manhattan, NY
-// Software Engineer - Reality Labs Neural Interfaces | Python, AWS 			Sep 2022 - Nov 2022
-// Ramped up on the ML pipeline and data infrastructure
-// Implemented tests to ensure robustness of data pipeline
-// Introduced new features to internal API for accessing NoSQL key-value store
-
-// Facebook - Oculus									Los Angeles, CA
-// Software Engineering Intern | React Native, Mercurial, GraphQL 			May 2021 – Aug 2021
-// Built reusable video thumbnail component for consumption by both Discovery Explore and Store teams
-// Tested new feature internally, and rolled out to 1000s of public users
-// A/B testing on video thumbnails with statistically significant increase in key engagement metrics
-
-// UF McIntyre Microbiology Lab							Gainesville, FL
-// Undergraduate Research Assistant | Semantic Segmentation, TensorFlow		Sep 2020 - Aug 2021
-// Built ML model to perform semantic segmentation on 1000s of images of flies
-// Optimized hyperparameters reaching peak mean IOU of ~95%
-// Wrote a data pipeline to handle data augmentation and NumPy multi-channel segmentation masks
-// Trained dozens of models using GPUs on UF’s Nvidia HiPerGator 3.0 supercomputer
-
-// Facebook										Menlo Park, CA
-// FBU Software Engineer Intern | Android SDK, Google Firebase, RESTful APIs		Jun 2020 – Aug 2020
-// Learned professional SWE practices, e.g. stand-ups, code reviews, clean commits
-// Made android apps mimicking Flixster, Twitter, and Instagram
-// Made original app, ArgumenTree with a focus on scalability
-// Implemented safe NoSQL practices, e.g. batched writes and transactions
-
 export const EXPERIENCES: Experience[] = [
   {
     companyName: 'Facebook',
@@ -112,3 +85,18 @@ export const EXPERIENCES: Experience[] = [
     relevantSkills: ['AWS', 'Docker', 'ETL', 'PostgreSQL', 'React'],
   },
 ];
+
+export const EXTERNAL_LINKS = [
+  {
+    name: 'GitHub',
+    url: 'https://github.com/morabrandoi',
+  },
+  {
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/brandomora/',
+  },
+  {
+    name: 'Resumé',
+    url: 'https://drive.google.com/file/d/15uyuTyCoj14Dabf9qwLpJJyy0qtLDj5G/view?usp=drive_link',
+  },
+] as const;
