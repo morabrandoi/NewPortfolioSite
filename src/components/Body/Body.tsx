@@ -29,6 +29,7 @@ export default function Body() {
       zIndex={10}
       marginLeft={'auto'}
       marginRight={'auto'}
+      marginTop={16}
       width={'calc(max(350px, 80vw))'}
     >
       {sectionComponents}
