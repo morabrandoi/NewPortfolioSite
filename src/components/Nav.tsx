@@ -86,7 +86,8 @@ export default function Nav() {
     <>
       <Box
         bg={colorModeValue}
-        position={'sticky'}
+        position={'fixed'}
+        width="100vw"
         py={2}
         px={4}
         top={0}
@@ -132,7 +133,7 @@ export default function Nav() {
                 </Center>
                 <br />
                 <Center>
-                  <p>Your Future Employee ;)</p>
+                  <p>Your Future Employee 😄</p>
                 </Center>
                 <br />
                 <MenuDivider />

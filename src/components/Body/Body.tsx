@@ -29,7 +29,7 @@ export default function Body() {
       zIndex={10}
       marginLeft={'auto'}
       marginRight={'auto'}
-      width={'calc(max(350px, 60vw))'}
+      width={'calc(max(350px, 80vw))'}
     >
       {sectionComponents}
     </VStack>
