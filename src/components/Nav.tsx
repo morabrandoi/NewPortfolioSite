@@ -103,7 +103,9 @@ export default function Nav() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box>Brando Mora</Box>
+            <Box>
+              <b>Brando Mora</b>
+            </Box>
             <HStack
               as={'nav'}
               spacing={4}
