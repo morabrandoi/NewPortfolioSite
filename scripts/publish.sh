@@ -19,4 +19,4 @@ curl -sL "$WEBFLOW_URL" \
 echo "Saved to $OUT"
 echo "Deploying to Firebase..."
 
-cd "$REPO_ROOT" && firebase deploy --only hosting
+cd "$REPO_ROOT" && firebase deploy --only hosting:personal

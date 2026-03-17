@@ -5,10 +5,11 @@
   "targets": {
     "brando-mora-personal-site": {
       "hosting": {
-        "www": [
-          "brandomora"
+        "personal": [
+          "brando-mora-personal-site"
         ]
       }
     }
-  }
+  },
+  "etags": {}
 }
